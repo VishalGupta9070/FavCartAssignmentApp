@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="140dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="8dp">
+
+    <ImageView
+        android:id="@+id/image_fruit"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_menu_gallery"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fruit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tomatos"
+        android:textColor="#F60D0D"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_fruit" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/_45"
+        android:layout_marginStart="5dp"
+        app:layout_constraintHorizontal_weight="2"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@id/original_price"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fruit_name" />
+
+    <TextView
+        android:id="@+id/original_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_weight="1"
+        android:text="60"
+        android:textSize="10sp"
+        app:layout_constraintTop_toTopOf="@id/discount"
+        android:textColor="#686666"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@id/discount"
+        app:layout_constraintEnd_toStartOf="@id/discount"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@id/price"
+         />
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintHorizontal_weight="3"
+        android:text="₹15 off"
+        android:gravity="center"
+        android:textColor="#4CAF50"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/original_price"
+        app:layout_constraintTop_toBottomOf="@id/fruit_name" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:id="@+id/one_linear"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/second_linear"
+        app:layout_constraintTop_toBottomOf="@id/price"
+        android:orientation="horizontal"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@drawable/grey_bg"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintHorizontal_weight="1.5"
+        >
+
+        <TextView
+            android:id="@+id/countTV"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="1 KG"
+            android:background="@drawable/grey_side_bg"
+            android:layout_weight="4"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_arrow_drop_down_24"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:id="@+id/second_linear"
+        android:background="@drawable/green_bg"
+       app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/discount"
+        app:layout_constraintHorizontal_weight="2"
+        app:layout_constraintStart_toEndOf="@id/one_linear"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="ADD"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="#3DB842"
+            android:layout_weight="5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="+"
+            android:gravity="center"
+            android:textColor="#3DB842"
+            android:layout_weight="2"/>
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
